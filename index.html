@@ -9,6 +9,13 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./style/style.scss" />
     <title>GridPracticeSecond</title>
@@ -16,10 +23,18 @@
   <body>
     <div class="phone">
       <div class="phone__wrap">
+        <div class="top-bar">
+          <div class="top-bar__time"></div>
+          <div class="top-bar__info">
+            <i class="xi-signal-4 top-bar__signal"></i>
+            <i class="top-bar__wifi xi-wifi"></i>
+            <i class="xi-battery-50 top-bar__battery"></i>
+          </div>
+        </div>
         <div class="checkout">
           <header class="header">
             <div class="header__wrap">
-              <button class="header__back-btn">
+              <button class="header__btn-back">
                 <i class="xi-angle-left-min"></i>
               </button>
               <h2 class="header__title">CHECKOUT</h2>
@@ -36,24 +51,84 @@
                   <span>INFORMATION</span>
                 </div>
                 <div class="contents__order-box">
-                  <span class="circle"></span>
+                  <span class="circle active"></span>
                   <span class="line"></span>
                   <span class="circle"></span>
                 </div>
               </div>
-              <div class="contents__order-sum">
+              <div class="contents__total">
                 <div class="contents__text-box">
                   <span>ORDER SUMMARY</span>
-                  <span>5 items in your cart`</span>
+                  <span>5 items in your cart</span>
                 </div>
                 <div class="contents__price">$ 2,440</div>
-                <button class="accodion"></button>
-                <div class="contents__order-group">
-                  <ul class="contents__order-list">
-                    <li class="contents__order-item"></li>
-                  </ul>
-                </div>
+                <button class="accodion-btn">
+                  <i class="xi-angle-down-min"></i>
+                </button>
               </div>
+              <ul class="contents__order-list">
+                <li class="contents__order-item">
+                  <div class="item-info-box">
+                    <div class="item-info-size">
+                      <span>SIZE: 48 - L</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                    <div class="item-info-pic"></div>
+                    <div class="item-info-num">
+                      <span>QT: 2 PIECES</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                  </div>
+                  <div class="item-text-box">
+                    <button class="item-btn-close">X</button>
+                    <div class="item-text-title">
+                      <h4>POP TEMPLE PRINT T-SHIRT</h4>
+                    </div>
+                    <div class="item-text-price">$ 1990</div>
+                  </div>
+                </li>
+                <li class="contents__order-item">
+                  <div class="item-info-box">
+                    <div class="item-info-size">
+                      <span>SIZE: 48 - L</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                    <div class="item-info-pic"></div>
+                    <div class="item-info-num">
+                      <span>QT: 2 PIECES</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                  </div>
+                  <div class="item-text-box">
+                    <button class="item-btn-close">X</button>
+                    <div class="item-text-title">
+                      <h4>POP TEMPLE PRINT T-SHIRT</h4>
+                    </div>
+                    <div class="item-text-price">$ 1990</div>
+                  </div>
+                </li>
+                <li class="contents__order-item">
+                  <div class="item-info-box">
+                    <div class="item-info-size">
+                      <span>SIZE: 48 - L</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                    <div class="item-info-pic"></div>
+                    <div class="item-info-num">
+                      <span>QT: 2 PIECES</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                  </div>
+                  <div class="item-text-box">
+                    <button class="item-btn-close">X</button>
+                    <div class="item-text-title">
+                      <h4>POP TEMPLE PRINT T-SHIRT</h4>
+                    </div>
+                    <div class="item-text-price">$ 1990</div>
+                  </div>
+                </li>
+              </ul>
+
               <ul class="contents__info-list">
                 <li class="contents__info-item">
                   <a href="#">
@@ -63,15 +138,143 @@
                         UPS International ㅡ Express Shipping
                       </span>
                     </div>
-                    <div class="contents__btn-more"></div>
+                    <div class="contents__btn-more">
+                      <i class="xi-arrow-right"></i>
+                    </div>
                   </a>
                 </li>
+                <li class="contents__info-item">
+                  <a href="#">
+                    <div class="contents__text-box">
+                      <h3 class="contents__title">Payment method</h3>
+                      <span class="contents__desc">
+                        Credit card ㅡ ending in 4100
+                      </span>
+                    </div>
+                    <div class="contents__btn-more">
+                      <i class="xi-arrow-right"></i>
+                    </div>
+                  </a>
+                </li>
+                <li class="contents__info-item">
+                  <a href="#">
+                    <div class="contents__text-box">
+                      <h3 class="contents__title">Address</h3>
+                      <span class="contents__desc">
+                        Preferred address ㅡ Home #1
+                      </span>
+                    </div>
+                    <div class="contents__btn-more">
+                      <i class="xi-arrow-right"></i>
+                    </div>
+                  </a>
+                </li>
+                <li class="contents__info-item">
+                  <a href="#">
+                    <div class="contents__text-box">
+                      <h3 class="contents__title">Phone number</h3>
+                      <span class="contents__desc">
+                        Preferred number ㅡ 444-444-5454
+                      </span>
+                    </div>
+                    <div class="contents__btn-more">
+                      <i class="xi-arrow-right"></i>
+                    </div>
+                  </a>
+                </li>
+                <li
+                  class="contents__info-item contents__info-item--vacancy"
+                ></li>
               </ul>
               <a href="#" role="button" class="contents__button">
                 PROCEED TO THE NEXT STEP
               </a>
             </div>
-            <div class="contents__page-second contents__page"></div>
+            <div class="contents__page-second contents__page">
+              <div class="contents__top-group">
+                <div class="contents__text-box">
+                  <span>01/02</span>
+                  <span>INFORMATION</span>
+                </div>
+                <div class="contents__order-box">
+                  <span class="circle active"></span>
+                  <span class="line"></span>
+                  <span class="circle"></span>
+                </div>
+              </div>
+              <div class="contents__total">
+                <div class="contents__text-box">
+                  <span>ORDER SUMMARY</span>
+                  <span>5 items in your cart</span>
+                </div>
+                <div class="contents__price">$ 2,440</div>
+                <button class="accodion-btn">
+                  <i class="xi-angle-down-min"></i>
+                </button>
+              </div>
+              <ul class="contents__order-list">
+                <li class="contents__order-item">
+                  <div class="item-info-box">
+                    <div class="item-info-size">
+                      <span>SIZE: 48 - L</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                    <div class="item-info-pic"></div>
+                    <div class="item-info-num">
+                      <span>QT: 2 PIECES</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                  </div>
+                  <div class="item-text-box">
+                    <button class="item-btn-close">X</button>
+                    <div class="item-text-title">
+                      <h4>POP TEMPLE PRINT T-SHIRT</h4>
+                    </div>
+                    <div class="item-text-price">$ 1990</div>
+                  </div>
+                </li>
+                <li class="contents__order-item">
+                  <div class="item-info-box">
+                    <div class="item-info-size">
+                      <span>SIZE: 48 - L</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                    <div class="item-info-pic"></div>
+                    <div class="item-info-num">
+                      <span>QT: 2 PIECES</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                  </div>
+                  <div class="item-text-box">
+                    <button class="item-btn-close">X</button>
+                    <div class="item-text-title">
+                      <h4>POP TEMPLE PRINT T-SHIRT</h4>
+                    </div>
+                    <div class="item-text-price">$ 1990</div>
+                  </div>
+                </li>
+                <li class="contents__order-item">
+                  <div class="item-info-box">
+                    <div class="item-info-size">
+                      <span>SIZE: 48 - L</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                    <div class="item-info-pic"></div>
+                    <div class="item-info-num">
+                      <span>QT: 2 PIECES</span
+                      ><button><i class="xi-long-arrow-down"></i></button>
+                    </div>
+                  </div>
+                  <div class="item-text-box">
+                    <button class="item-btn-close">X</button>
+                    <div class="item-text-title">
+                      <h4>POP TEMPLE PRINT T-SHIRT</h4>
+                    </div>
+                    <div class="item-text-price">$ 1990</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </main>
         </div>
         <div class="my-cart">
@@ -81,4 +284,6 @@
       </div>
     </div>
   </body>
+
+  <script src="./index.js"></script>
 </html>
